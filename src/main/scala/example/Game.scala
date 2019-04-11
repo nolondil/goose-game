@@ -22,7 +22,7 @@ object GameHandler {
       (false, board)
     case add(player) =>
       val newPlayers = board.players + player
-      val newPositions = board.positions + (player -> 1)
+      val newPositions = board.positions + (player -> 0)
       println(s"Players: ${newPlayers.mkString(", ")}")
       (false, board.copy(players = newPlayers, positions = newPositions))
     case move(player, die1, die2) if board.players(player) =>
